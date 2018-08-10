@@ -4,23 +4,60 @@ using UnityEngine;
 
 public class stackBehaviour : MonoBehaviour
 {
+    public GameObject itemPrefab;
     public int maxSize = 4;
-    private List<classTea> actualStack = new List<classTea>();
+    private GameObject[] actualStack;
 
-    public bool AddTea(classTea newTea)
+    void Start()
     {
-        // Limit the stack and tell if it worked
-        if (GetStackSize() < maxSize)
+        actualStack = new GameObject[maxSize];
+    }
+
+    public bool AddTea(string newName, double newDose, double newTime, double newImpress)
+    {
+        // For legibility
+        int index = FindFirstEmpty();
+
+        // Check if there's any spot left
+        if (index != -1)
         {
-            actualStack.Add(newTea);
+            // Let's instantiate it into a new object so that we can easily modify it in code
+            GameObject newTea = Instantiate(itemPrefab);
+            // Put in in me
+            newTea.transform.SetParent(transform);
+            // Set it's actual location on screen... I hope.
+            newTea.GetComponent<RectTransform>().anchoredPosition = new Vector2(-67, -76 - index*60);
+            // Fill in item's data
+            newTea.GetComponent<ItemClass>().MakeMe(index, newName, newDose, newTime, newImpress);
+
+            // Now that it's all set up, let's actually keep track of it!
+            actualStack[index] = newTea;
+
+            // Tell that it worked!
             return true;
         }
         else
+            // Tell that it didn't work...
             return false;
     }
 
-    public int GetStackSize()
+    public void RemoveTea(int place)
     {
-        return actualStack.Count;
+        actualStack[place] = null;
+    }
+
+    private int FindFirstEmpty()
+    {
+        // Go through the array of objects
+        for (int e=0; e<maxSize; e++)
+        {
+            // As soon as you hit an empty one...
+            if (actualStack[e] == null)
+                // ...tell where you found it!
+                return e;
+        }
+
+        // Still nothing? Return an impossible number to tell them it won't do!
+        return -1;
     }
 }
