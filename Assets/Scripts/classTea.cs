@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class classTea : MonoBehaviour
+public class classTea
 {
     // Constructor
     public classTea(string newName, double newPrice, double newDose, double newTime, double newImpress)

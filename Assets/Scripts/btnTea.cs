@@ -24,13 +24,15 @@ public class btnTea : MonoBehaviour
         // For easier typing
         int stackSize = theStack.GetComponent<stackBehaviour>().GetStackSize();
 
-        // Instantiate the prefab as an in-game object
-        GameObject newItem = Instantiate(teaStatus, theStack.transform);
-
-        // Set its actual UI position (I think... I hope!)
-        newItem.GetComponent<RectTransform>().anchoredPosition = new Vector2(-67, -(76 + 60 * stackSize));
-
         // Add the actual tea object to the actual list that is the stack
-        theStack.GetComponent<stackBehaviour>().AddTea(myTea);
+        if (theStack.GetComponent<stackBehaviour>().AddTea(myTea))
+        {
+            // If that worked, instantiate the prefab as an in-game object
+            GameObject newItem = Instantiate(teaStatus, theStack.transform);
+            newItem.GetComponentInChildren<Text>().text = myTea.teaName;
+
+            // And set its actual UI position (I think... I hope!)
+            newItem.GetComponent<RectTransform>().anchoredPosition = new Vector2(-67, -(76 + 60 * stackSize));
+        }
     }
 }
