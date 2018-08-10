@@ -9,13 +9,28 @@ public class btnTea : MonoBehaviour
     public GameObject teaStatus;
     // The object to hold the stack
     public GameObject theStack;
+    // The tea's properties
+    private classTea myTea;   // Most original variable name since the invention of tea
+    public string teaName;
+    public double teaPrice, teaDose, teaTime, teaImpress;
+
+    void Start()
+    {
+        myTea = new classTea(teaName, teaPrice, teaDose, teaTime, teaImpress);
+    }
 
     public void AddTea()
     {
+        // For easier typing
+        int stackSize = theStack.GetComponent<stackBehaviour>().GetStackSize();
+
         // Instantiate the prefab as an in-game object
         GameObject newItem = Instantiate(teaStatus, theStack.transform);
 
-        // For some reason it gets set to x=-1020 and stuff, let's just fix that!
-        newItem.GetComponent<RectTransform>().anchoredPosition = new Vector2(-67, -76);
+        // Set its actual UI position (I think... I hope!)
+        newItem.GetComponent<RectTransform>().anchoredPosition = new Vector2(-67, -(76 + 60 * stackSize));
+
+        // Add the actual tea object to the actual list that is the stack
+        theStack.GetComponent<stackBehaviour>().AddTea(myTea);
     }
 }

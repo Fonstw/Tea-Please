@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222931729028410304}
   - component: {fileID: 114992887688934492}
   - component: {fileID: 114486334777860850}
+  - component: {fileID: 114976458031947312}
   m_Layer: 5
   m_Name: TeaButton
   m_TagString: Untagged
@@ -67,14 +68,14 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -117,9 +118,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114992887688934492}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114976458031947312}
+        m_MethodName: AddTea
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114976458031947312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044280718433724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63977c462ff9e74582bff34ac9f8ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teaStatus: {fileID: 1478119294717492, guid: 9834abb5bbf7dc64c8c8c3a8095c9c5c, type: 2}
+  theStack: {fileID: 0}
 --- !u!114 &114992887688934492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,7 +209,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1044280718433724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -284.00006, y: 0, z: 0}
+  m_LocalPosition: {x: -166, y: 0, z: 0}
   m_LocalScale: {x: 0.953, y: 0.953, z: 0.953}
   m_Children:
   - {fileID: 224479180566686838}
@@ -193,6 +218,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -284.00006, y: 0}
+  m_AnchoredPosition: {x: -166, y: 0}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0, y: 0}
