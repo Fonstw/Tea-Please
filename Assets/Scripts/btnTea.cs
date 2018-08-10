@@ -14,9 +14,9 @@ public class btnTea : MonoBehaviour
     public void AddTea()
     {
         // Tell the stack to add an item with my info
-        if (theStack.GetComponent<stackBehaviour>().AddTea(teaName, teaDose, teaTime, teaImpress))
+        if (StatusManager.HasMoney(true, teaPrice) && theStack.GetComponent<stackBehaviour>().AddTea(teaName, teaDose, teaTime, teaImpress))
         {
-            // If the tea was actually ordered, take the money for it
+            StatusManager.PayUp(true, teaPrice);
         }
     }
 }

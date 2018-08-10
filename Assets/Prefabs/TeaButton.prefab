@@ -143,8 +143,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63977c462ff9e74582bff34ac9f8ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teaStatus: {fileID: 1478119294717492, guid: 9834abb5bbf7dc64c8c8c3a8095c9c5c, type: 2}
   theStack: {fileID: 0}
+  teaName: 
+  teaPrice: 0
+  teaDose: 0
+  teaTime: 0
+  teaImpress: 0
 --- !u!114 &114992887688934492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,7 +195,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1712111653777068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.5, y: 62.5, z: 0}
+  m_LocalPosition: {x: 20.833336, y: 62.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224504235022101714}
@@ -209,8 +213,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1044280718433724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -166, y: 0, z: 0}
-  m_LocalScale: {x: 0.953, y: 0.953, z: 0.953}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224479180566686838}
   m_Father: {fileID: 0}
@@ -218,6 +222,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -166, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 125, y: 125}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.3333333, y: 0}

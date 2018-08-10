@@ -24,9 +24,9 @@ public class stackBehaviour : MonoBehaviour
             // Let's instantiate it into a new object so that we can easily modify it in code
             GameObject newTea = Instantiate(itemPrefab);
             // Put in in me
-            newTea.transform.SetParent(transform);
+            newTea.transform.SetParent(transform, false);
             // Set it's actual location on screen... I hope.
-            newTea.GetComponent<RectTransform>().anchoredPosition = new Vector2(-67, -76 - index*60);
+            newTea.GetComponent<RectTransform>().anchoredPosition = new Vector2(-124, -126 - index*60);
             // Fill in item's data
             newTea.GetComponent<ItemClass>().MakeMe(index, newName, newDose, newTime, newImpress);
 
