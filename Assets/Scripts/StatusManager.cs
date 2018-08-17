@@ -46,11 +46,13 @@ public class StatusManager : Singleton<StatusManager>
         switch (player)
         {
             case true:   // Player
-                competitors[0].money -= amount;
+                //competitors[0].money -= amount;
+                competitors[0].Pay(amount);
                 playerText.text = competitors[0].money.ToString();
                 break;
             default:   // AI
-                competitors[1].money -= amount;
+                //competitors[1].money -= amount;
+                competitors[1].Pay(amount);
                 AIText.text = competitors[1].money.ToString();
                 break;
         }
