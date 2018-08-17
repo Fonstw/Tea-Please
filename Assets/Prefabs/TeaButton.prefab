@@ -143,12 +143,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63977c462ff9e74582bff34ac9f8ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theStack: {fileID: 0}
+  playerRiches: {fileID: 0}
   teaName: 
-  teaPrice: 0
-  teaDose: 0
-  teaTime: 0
-  teaImpress: 0
+  teaPrice: -1
+  teaDose: -1
+  teaTime: -1
+  teaImpress: -1
+  teaEffect: -1
+  myType: 1
 --- !u!114 &114992887688934492
 MonoBehaviour:
   m_ObjectHideFlags: 1

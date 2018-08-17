@@ -5,18 +5,21 @@ using UnityEngine.UI;
 
 public class btnTea : MonoBehaviour
 {
-    // The object to hold the stack
-    public GameObject theStack;
+    public enum teaType { green = 1, black, white, oolong, puEhr, herbal = 0 }
+
+    // UI.Text object holding the player's script thingy mess-up
+    public Text playerRiches;
     // The tea's properties
     public string teaName;
     public double teaPrice, teaDose, teaTime, teaImpress;
+    public int teaEffect;
+    public teaType myType;
 
     public void AddTea()
     {
-        // Tell the stack to add an item with my info
-        if (StatusManager.HasMoney(true, teaPrice) && theStack.GetComponent<stackBehaviour>().AddTea(teaName, teaDose, teaTime, teaImpress))
-        {
-            StatusManager.PayUp(true, teaPrice);
-        }
+        CompetitorClass player = playerRiches.GetComponent<CompetitorClass>();
+
+        // Let the player script figure out how to make me
+        player.MakeTea(teaName, teaPrice, teaDose, teaTime, teaImpress, teaEffect, (int)myType);
     }
 }

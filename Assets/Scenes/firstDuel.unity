@@ -286,6 +286,16 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114976458031947312, guid: 66018b600b62f434487cb37a1a1e0181,
+        type: 2}
+      propertyPath: myType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976458031947312, guid: 66018b600b62f434487cb37a1a1e0181,
+        type: 2}
+      propertyPath: playerRiches
+      value: 
+      objectReference: {fileID: 1096102286}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66018b600b62f434487cb37a1a1e0181, type: 2}
   m_IsPrefabParent: 0
@@ -385,6 +395,16 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114976458031947312, guid: 66018b600b62f434487cb37a1a1e0181,
+        type: 2}
+      propertyPath: myType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976458031947312, guid: 66018b600b62f434487cb37a1a1e0181,
+        type: 2}
+      propertyPath: playerRiches
+      value: 
+      objectReference: {fileID: 1096102286}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66018b600b62f434487cb37a1a1e0181, type: 2}
   m_IsPrefabParent: 0
@@ -415,7 +435,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 681494699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -281.08807, z: 0}
+  m_LocalPosition: {x: 0, y: -281.3316, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1997425153}
@@ -635,6 +655,16 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114976458031947312, guid: 66018b600b62f434487cb37a1a1e0181,
+        type: 2}
+      propertyPath: myType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976458031947312, guid: 66018b600b62f434487cb37a1a1e0181,
+        type: 2}
+      propertyPath: playerRiches
+      value: 
+      objectReference: {fileID: 1096102286}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66018b600b62f434487cb37a1a1e0181, type: 2}
   m_IsPrefabParent: 0
@@ -728,6 +758,7 @@ GameObject:
   - component: {fileID: 1096102285}
   - component: {fileID: 1096102287}
   - component: {fileID: 1096102286}
+  - component: {fileID: 1096102288}
   m_Layer: 5
   m_Name: TextPlayerRiches
   m_TagString: Untagged
@@ -792,6 +823,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1096102284}
+--- !u!114 &1096102288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1096102284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bea86f48bf7441745a15f865eb44138d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theStack: {fileID: 1284549235}
+  playerStatus: 1
+  money: 60
+  passiveSkills: 
 --- !u!1 &1263091707
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +929,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1284549235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 500, y: 281.08807, z: 0}
+  m_LocalPosition: {x: 500.00003, y: 281.3316, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1263091708}
@@ -980,6 +1026,7 @@ GameObject:
   - component: {fileID: 1376320931}
   - component: {fileID: 1376320933}
   - component: {fileID: 1376320932}
+  - component: {fileID: 1376320934}
   m_Layer: 5
   m_Name: TextAIRiches
   m_TagString: Untagged
@@ -1044,6 +1091,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1376320930}
+--- !u!114 &1376320934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1376320930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bea86f48bf7441745a15f865eb44138d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theStack: {fileID: 1284549235}
+  playerStatus: 0
+  money: 60
+  passiveSkills: 
 --- !u!1 &1397503124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,8 +1256,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1427220204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 386, y: 217, z: 0}
-  m_LocalScale: {x: 0.772, y: 0.772, z: 0.772}
+  m_LocalPosition: {x: 383, y: 215.5, z: 0}
+  m_LocalScale: {x: 0.766, y: 0.766, z: 0.766}
   m_Children:
   - {fileID: 1839200917}
   - {fileID: 2074490414}
@@ -1373,7 +1435,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1839200916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -500, y: 281.08807, z: 0}
+  m_LocalPosition: {x: -500.00003, y: 281.3316, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1456042567}
@@ -1404,8 +1466,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad188d2f5e6604947899f2156af30f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMoney: 300
-  AIMoney: 300
+  playerMoney: 60
+  AIMoney: 60
   setPlayerText: {fileID: 1096102286}
   setAIText: {fileID: 1376320932}
 --- !u!1001 &1916584449
@@ -1499,6 +1561,16 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114976458031947312, guid: 66018b600b62f434487cb37a1a1e0181,
+        type: 2}
+      propertyPath: myType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976458031947312, guid: 66018b600b62f434487cb37a1a1e0181,
+        type: 2}
+      propertyPath: playerRiches
+      value: 
+      objectReference: {fileID: 1096102286}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66018b600b62f434487cb37a1a1e0181, type: 2}
   m_IsPrefabParent: 0
@@ -1734,6 +1806,21 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114976458031947312, guid: 66018b600b62f434487cb37a1a1e0181,
+        type: 2}
+      propertyPath: myType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976458031947312, guid: 66018b600b62f434487cb37a1a1e0181,
+        type: 2}
+      propertyPath: teaEffect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976458031947312, guid: 66018b600b62f434487cb37a1a1e0181,
+        type: 2}
+      propertyPath: playerRiches
+      value: 
+      objectReference: {fileID: 1096102286}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66018b600b62f434487cb37a1a1e0181, type: 2}
   m_IsPrefabParent: 0
@@ -1837,7 +1924,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2074490413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 500, y: 281.08807, z: 0}
+  m_LocalPosition: {x: 500.00003, y: 281.3316, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2054638995}

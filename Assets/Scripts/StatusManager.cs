@@ -18,16 +18,21 @@ public class StatusManager : Singleton<StatusManager>
     void Start()
     {
         // Initialize both competitors with their respective starting money. I would've used arrays and a for-loop if there were much more of them but alas.
-        competitors[0] = new CompetitorClass(playerMoney);
-        competitors[1] = new CompetitorClass(AIMoney);
+        //competitors[0] = new CompetitorClass(playerMoney);
+        //competitors[1] = new CompetitorClass(AIMoney);
 
         // Make sure I have static Text objects. Again, would've been arrays if there were more players
-        playerText = setPlayerText;
-        AIText = setAIText;
+        //playerText = setPlayerText;
+        //AIText = setAIText;
 
-        // Show inital money amounts
-        playerText.text = playerMoney.ToString();
-        AIText.text = AIMoney.ToString();
+        //// Show inital money amounts
+        //playerText.text = playerMoney.ToString();
+        //AIText.text = AIMoney.ToString();
+    }
+
+    public static CompetitorClass GetPlayer()
+    {
+        return competitors[0];
     }
 
     public static bool HasMoney(bool player, double amount)
@@ -46,12 +51,10 @@ public class StatusManager : Singleton<StatusManager>
         switch (player)
         {
             case true:   // Player
-                //competitors[0].money -= amount;
                 competitors[0].Pay(amount);
                 playerText.text = competitors[0].money.ToString();
                 break;
             default:   // AI
-                //competitors[1].money -= amount;
                 competitors[1].Pay(amount);
                 AIText.text = competitors[1].money.ToString();
                 break;

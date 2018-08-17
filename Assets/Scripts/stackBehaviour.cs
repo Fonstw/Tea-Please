@@ -13,7 +13,7 @@ public class stackBehaviour : MonoBehaviour
         actualStack = new GameObject[maxSize];
     }
 
-    public bool AddTea(string newName, double newDose, double newTime, double newImpress)
+    public bool AddTea(string newName, double newDose, double newTime, double newImpress, int newEffect)
     {
         // For legibility
         int index = FindFirstEmpty();
@@ -28,7 +28,7 @@ public class stackBehaviour : MonoBehaviour
             // Set it's actual location on screen... I hope.
             newTea.GetComponent<RectTransform>().anchoredPosition = new Vector2(-124, -126 - index*60);
             // Fill in item's data
-            newTea.GetComponent<ItemClass>().MakeMe(index, newName, newDose, newTime, newImpress);
+            newTea.GetComponent<ItemClass>().MakeMe(index, newName, newDose, newTime, newImpress, newEffect);
 
             // Now that it's all set up, let's actually keep track of it!
             actualStack[index] = newTea;

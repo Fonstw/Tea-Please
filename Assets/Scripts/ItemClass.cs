@@ -11,6 +11,7 @@ public class ItemClass : MonoBehaviour
     public double time { get; private set; }
     public double dose { get; private set; }
     public double impress { get; private set; }
+    public int effect { get; private set; }
 
     // MYY THINGIES HISSSS
     private double timer;
@@ -34,13 +35,14 @@ public class ItemClass : MonoBehaviour
     }
 
     // So, this is kind of like a constructor because I'm lost on how to do this otherwise...
-    public void MakeMe(int newID, string newName, double newTime, double newDose, double newImpress)
+    public void MakeMe(int newID, string newName, double newTime, double newDose, double newImpress, int newEffect)
     {
         identifier = newID;
         itemName = newName;
         time = newTime; timer = newTime; run = true;
         dose = newDose;
         impress = newImpress;
+        effect = newEffect;
 
         GetComponentInChildren<Text>().text = itemName;
     }
